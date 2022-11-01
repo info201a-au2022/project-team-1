@@ -29,7 +29,7 @@ Since the introduction of TikTok in 2018, it has had an undeniable impact on the
 
 **_What Are We Looking At?_**
 
-The analysis of our project will be critical in understanding today’s music industry. We want to be able to ask the right questions to find the answers we are looking for. For example, we are curious about TikToks role in artists’ road to fame. If you were to make it big on TikTok, does this translate to your success on the Billboard charts? The Pudding has done more in depth research on this and concluded that “Of the artists who charted on Spotify from January 2020 to December 2021, 332 had never charted before. 25% of them came from TikTok.” From this main idea, we can begin to see that the direct stakeholders are new artists who are using TikTok as a promotional tool for their craft, and the indirect stakeholders are the previously established musicians who are competing with them, as well as the audience of music listeners. 
+The analysis of our project will be critical in understanding today’s music industry. We want to be able to ask the right questions to find the answers we are looking for. For example, we are curious about TikToks role in artists’ road to fame. If you were to make it big on TikTok, does this translate to your success on the Billboard charts? The Pudding has done more in depth research on this and concluded that “Of the artists who charted on Spotify from January 2020 to December 2021, 332 had never charted before. 25% of them came from TikTok.” From this main idea, we can begin to see that the direct stakeholders are new artists who are using TikTok as a promotional tool for their craft, and the indirect stakeholders are the previously established musicians who are competing with them, as well as the audience of music listeners.
 
 **_Societal Setting_**
 
@@ -65,12 +65,12 @@ For our second research question, we should use the TikTok Popular sets database
 
 For our third research question we can use the Ultimate Pop Data site to see if artists are releasing different versions of their songs. Then we can use the TikTok Trending Tracks data to see how well the songs are doing on TikTok.
 
-| Name of Data File    | # of observations(rows)| # of variables (columns) |
-| ----------- | ----------- | |
-| TikTok Popular Sets   | 258        | 18 |
-| Ultimate Pop Data   | 100+       | 9 |
-| Tiktok Trending Tracks | 3560 |  23|
-| Most Popular Artists | 1000 | 4
+| **Name of Data File** | **# of observations(rows)**| **# of variables (columns)** |
+| :----------- | :----------- | :----------
+| TikTok Popular Sets | 258 | 18 |
+| Ultimate Pop Data | 100+ | 9 |
+| Tiktok Trending Tracks | 3560 | 23|
+| Most Popular Artists | 1000 | 4 |
 
 ## Expected Implications
 
