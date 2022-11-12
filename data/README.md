@@ -5,10 +5,10 @@ In our project, we use the following data files and Application Programming Inte
 ## Data files (TODO: Update/delete for your PROJECT)
 |Data File Name | Brief Description|
 |---------------| -----------------|
-|[charts](./charts.csv) | BillBoard Chart of current songs on the list. The date column and observations are a bit messed up as of right now.
-|[TikTok_songs_2021](./TikTok_songs_2021.csv) | CSV file of something?
-|[TikTok_songs_2022](./TikTok_songs_2022.csv) | CSV file of [this data set](https://www.kaggle.com/datasets/sveta151/tiktok-popular-songs-2022) we found on Kaggle.
-|[Top Songs 2022 BEST HITS 2022](./Top_Songs_2022_BEST_HITS_2022.csv)| CSV file 
+|[charts](../charts.csv) | BillBoard Chart of current songs on the list. The date column and observations are a bit messed up as of right now.
+|[TikTok_songs_2021](../TikTok_songs_2021.csv) | CSV file of something?
+|[TikTok_songs_2022](../TikTok_songs_2022.csv) | CSV file of [this data set](https://www.kaggle.com/datasets/sveta151/tiktok-popular-songs-2022) we found on Kaggle.
+|[Top Songs 2022 BEST HITS 2022](../Top_Songs_2022_BEST_HITS_2022.csv)| CSV file 
 
 ## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 
