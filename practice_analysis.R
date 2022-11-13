@@ -24,7 +24,7 @@ billboard_100 <- read.csv(file = "charts.csv")
 tiktok_popular_2022 <- read.csv(file = "TikTok_songs_2022.csv")
 
 #reading spotify top 2022
-spotify_2022 <- read.csv(file = "Top Songs 2022  BEST HITS 2022.csv")
+spotify_2022 <- read.csv(file = "Top_Songs_2022_BEST_HITS_2022.csv")
 
 #reading charts
 charts <- read.csv(file = "charts.csv")
