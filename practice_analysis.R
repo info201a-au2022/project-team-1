@@ -126,4 +126,15 @@ refined_charts <- billboard100_2021 %>%
   )
 
 main_data_frame <- full_join(refined_charts, main_data_frame)
+
+#renaming columns for readability
+#once ran once, can't be ran again??
+
+main_data_frame <- main_data_frame %>% 
+  rename(
+    "Weeks on Billboard Charts" = "weeks_on_board",
+    "# of Songs Trending on Tiktok by Artist in 2021" = "num_of_pop_songs.x",
+    "# of Songs Trending on Tiktok by Artist in 2022" = "num_of_pop_songs.y",
+    "Total # of Songs Trending on Tiktok by Artist" = "num_of_pop_songs"
+  )
   
