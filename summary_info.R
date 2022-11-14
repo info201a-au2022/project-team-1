@@ -43,7 +43,9 @@ tiktok_popular_both <- tiktok_popular_both %>%
   select(
     track_name,
     artist_name,
-    album
+    album,
+    artist_pop,
+    track_pop
   )
 
 spotify_popular_both <- spotify_popular_both %>% 
@@ -62,7 +64,7 @@ tiktok_and_spotify_popular <- left_join(
          )
   )
 
-# tiktok_and_spotify_popular <- tiktok_and_spotify_popular %>% distinct()
+# tiktok_and_spotify_popular <- tiktok_and_spotify_popular %>% unique()
 
 
-write.csv(tiktok_and_spotify_popular, file = 'tiktok_and_spotify_popular.csv', na = '0') 
+write.csv(tiktok_and_spotify_popular, file = 'tiktok_and_spotify_popular.csv') 
