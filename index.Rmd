@@ -1,0 +1,16 @@
+---
+title: "index"
+author: "group 1"
+date: "2022-11-14"
+output: html_document
+---
+
+
+```{r trial, echo=FALSE, results='asis'}
+# This is just practicing whether the table will show up
+library(knitr)
+summary_table <- read.csv(file = "tiktok_and_spotify_popular.csv")
+kable(summary_table[1:10, ])
+
+```
+

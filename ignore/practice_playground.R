@@ -1,6 +1,10 @@
 # This is a practice analysis for Info 201 Project Group 1
 # This is not the final analysis, but simply an exploration
 
+##############################
+# IGNORE FOR FINAL REPORT, THIS IS JUST A PLAYGROUND!!!!
+##############################
+
 library(dplyr)
 library(tidyr)
 
