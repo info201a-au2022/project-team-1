@@ -5,42 +5,67 @@ date: "2022-11-14"
 output: html_document
 ---
 
-
 This is a data set that shows this this and this.
-```{r trial, echo=FALSE, results='asis'}
+
+```{r trial, echo=FALSE, message=FALSE, results='asis'}
 # This is just practicing whether the table will show up
 library(knitr)
+library(dplyr)
 summary_table <- read.csv(file = "tiktok_and_spotify_popular.csv")
 kable(summary_table[1:10, ])
 
 ```
 
-<<<<<<< HEAD
+## Summary Values <- rewrite as paragraph
 
-```{r num_of_songs, echo=FALSE, results='asis'}
+```{r echo=FALSE, message = TRUE}
 num_of_songs <- nrow(summary_table)
-```
 
-```{r num_of_artists, echo=FALSE, results='asis'}
-library(dplyr)
 unique_artists <- summary_table %>% 
   group_by(artist_names) %>% 
   summarise(
     artist_name = unique(artist_names)
   )
 num_of_artists <- nrow(unique_artists)
+pop_both <- summary_table %>% 
+  filter(artist_pop >= 0)
+num_of_pop_both <- nrow(pop_both)
+
+artist_trend <- summary_table %>% 
+  filter(artist_pop >= 0) %>% 
+  summarise(
+    artist_names = unique(artist_names)
+  )
+num_of_trending_artists <- nrow(artist_trend)
+
+most_popular_artist <- summary_table %>% 
+  group_by(artist_names) %>% 
+  summarize(
+    num_of_songs =  length(unique(track_name))
+  ) %>% 
+  filter(num_of_songs == max(num_of_songs)) 
+
+most_popular_artist_name <- most_popular_artist %>% 
+  pull(artist_names)
+
+most_popular_artist_song_num <- most_popular_artist %>% 
+  pull(num_of_songs)
+
 ```
 
-```{r num_of_pop_both, echo=FALSE, results='asis'}
-
-```
 
 
-How many songs were analyzed?
-`r num_of_songs`
 
-How many artists were analyzed?
-`r num_of_artists`
+How many songs were analyzed? `r num_of_songs`
 
+How many artists were analyzed? `r num_of_artists`
+
+How many songs were trending on spotify were also trending on tiktok? `r num_of_pop_both`
+
+How many artists were trending on Tiktok out of the Spotify charts? `r num_of_trending_artists`
+
+How many songs did the most popular artist have trending on Tiktok? `r most_popular_artist_name`
+
+How many songs did she have? `r most_popular_artist_song_num`
 
 

@@ -23,7 +23,13 @@ chart$song_title = factor(chart$song_title, chart$song_title) #adds ordering fro
 
 point_peak_rank <- ggplot(
   data = chart, 
+#<<<<<<< HEAD
   aes(song_title, -peak_rank)) + geom_point()
 
 # RAHHHHHH
 # made it negative because the higher rank, the lower value you have
+#=======
+  aes(song_title, -peak_rank, col= "2021")) + geom_point()
+# RAHHHHHHH
+# made it negative because the higher rank, the lower value you have
+#>>>>>>> 39ec92ba464284e1436343022ee8e29b1b347d2e
