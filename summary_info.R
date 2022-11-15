@@ -68,3 +68,29 @@ tiktok_and_spotify_popular <- left_join(
 
 
 write.csv(tiktok_and_spotify_popular, file = 'tiktok_and_spotify_popular.csv') 
+
+unique_artists <- tiktok_and_spotify_popular %>% 
+  group_by(artist_names) %>% 
+  summarise(
+    artist_name = unique(artist_names)
+  )
+num_of_artists <- nrow(unique_artists)
+
+pop_both <- tiktok_and_spotify_popular %>% 
+  filter(artist_pop >= 0)
+
+artist_trend <- tiktok_and_spotify_popular %>% 
+  filter(artist_pop >= 0) %>% 
+  summarise(
+    artist_names = unique(artist_names)
+  )
+
+artist_and_num_of_songs <- tiktok_and_spotify_popular %>% 
+  group_by(artist_names) %>% 
+  summarize(
+    num_of_songs =  length(unique(track_name))
+  )
+
+most_popular_artist <- artist_and_num_of_songs %>% 
+  filter(num_of_songs == max(num_of_songs)) %>% 
+  pull(artist_names)
