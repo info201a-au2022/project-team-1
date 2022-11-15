@@ -28,6 +28,7 @@ artist_vs_song <- data.frame(pick_artist, number_of_songs)
 View(artist_vs_song)
 
 trending_artists <- ggplot(data = artist_vs_song) +
-  geom_col(mapping = aes(x=pick_artist, y=number_of_songs))
+  geom_col(mapping = aes(x=pick_artist, y=number_of_songs)) +
+  ggtitle("Number of Songs Artists Have Trending on TikTok and Spotify in 2022")
 
 trending_artists
