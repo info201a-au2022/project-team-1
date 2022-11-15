@@ -61,9 +61,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-source("../source/tt_and_spotify.R", local = TRUE)
-source("../source/tt_and_spotify_22.R", local = TRUE)
-source("../source/pie_tt_spotify_22.R", local = TRUE)
+source("source/tt_and_spotify.R")
+source("source/tt_and_spotify_22.R")
+source("source/pie_tt_spotify_22.R")
 ```
 
 ```{r}
