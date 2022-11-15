@@ -24,5 +24,6 @@ chart$song_title = factor(chart$song_title, chart$song_title) #adds ordering fro
 point_peak_rank <- ggplot(
   data = chart, 
   aes(song_title, -peak_rank)) + geom_point()
+
 # RAHHHHHH
 # made it negative because the higher rank, the lower value you have
