@@ -63,12 +63,15 @@ source("source/tt_and_spotify.R")
 point_peak_rank
 ```
 
+This first chart displays the relationship between songs in 2021 and their peak rank on the Spotify charts. The data comes from a table which contains songs that are popular on both TikTok and Spotify which are then organized by peak rank and plotted using ggplot. There are about 1027 overlapping songs which is why you can't see many values on the x-axis, song title. In the future we can use an interactive graph like plotly so that we can hover over points and see their exact values. We can also consider filtering this data to be focused on a certain artist, or range of peak ranks if we need that information later on. 
+
 2)
 ```{r echo = FALSE, message = TRUE}
-source("source/tt_and_spotify_22.R")
+source("source/trending_artists.R")
 
-point_peak_rank_22
+trending_artists
 ```
+
 
 3)
 ```{r echo = FALSE, message = TRUE}
