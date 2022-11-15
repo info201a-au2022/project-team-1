@@ -15,6 +15,7 @@ kable(summary_table[1:10, ])
 
 ```
 
+<<<<<<< HEAD
 
 ```{r num_of_songs, echo=FALSE, results='asis'}
 num_of_songs <- nrow(summary_table)
@@ -40,5 +41,6 @@ How many songs were analyzed?
 
 How many artists were analyzed?
 `r num_of_artists`
+
 
 
