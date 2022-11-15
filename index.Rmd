@@ -56,29 +56,18 @@ most_popular_artist_song_num <- most_popular_artist %>%
 For our data analysis, we took a look at data from 2020 to 2021 regarding popular songs on TikTok vs. the Spotify Charts. We analyzed `r num_of_songs` songs and `r num_of_artists` artists in total. We found there to be `r num_of_pop_both` songs that were trending on Spotify and TikTok. We then wondered how many artists were trending on Tiktok but not on the Spotify charts and found this number to be `r num_of_trending_artists`. The most popular artist trending on TikTok was `r most_popular_artist_name` and she had `r most_popular_artist_song_num` songs in total on the app.
 
 
-```{r setup1, include=FALSE}
-source("../source/tt_and_spotify.R")
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-``` {r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/tt_and_spotify.R", local = TRUE)
+source("../source/tt_and_spotify_22.R", local = TRUE)
+source("../source/pie_tt_spotify_22.R", local = TRUE)
+```
+
+```{r}
 point_peak_rank
 ```
 
-```{r setup2, include=FALSE}
-source("../source/tt_and_spotify_22.R")
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-``` {r echo=FALSE}
-point_peak_rank_22
-```
-
-```{r setup3, include=FALSE}
-source("../source/pie_tt_spotify_22.R")
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-``` {r echo=FALSE}
-pie
-```
