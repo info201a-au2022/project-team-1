@@ -29,7 +29,7 @@ point_peak_rank <- ggplot(
 # RAHHHHHH
 # made it negative because the higher rank, the lower value you have
 #=======
-  aes(song_title, -peak_rank, col= "2021")) + geom_point()
+  aes(song_title, -peak_rank, col= "2021") + geom_point()
 # RAHHHHHHH
 # made it negative because the higher rank, the lower value you have
 #>>>>>>> 39ec92ba464284e1436343022ee8e29b1b347d2e
