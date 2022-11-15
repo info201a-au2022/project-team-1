@@ -11,7 +11,7 @@ tiktok_22 <- read.csv("../data/TikTok_songs_2022.csv") %>%
   rename(song_title = track_name, artist = artist_name)
 
 chart_22 <- left_join(spotify_22, tiktok_22, by = c("song_title", "artist")) %>%
-  arrange(-peak_rank) 
+  arrange(-peak_rank)
 
 chart_22$song_title <- as.vector(chart_22$song_title) #gets rid of alphabetical order
 unique_2022 <- unique(chart_22$song_title)
