@@ -1,6 +1,7 @@
 library(dplyr)
 library(ggplot2)
 
+# set working directory to root project repo (so the main branch)
 spotify_22 <- read.csv("data/spotify_charts_2022.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)

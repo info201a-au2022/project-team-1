@@ -1,7 +1,8 @@
 library(dplyr)
 library(ggplot2)
 
-# set working directory to root (project-team-1)
+# set working directory to root (project-team-1) so markdown would work
+
 # reduced columns of spotify_charts_2021.csv to just 4 columns
 # renamed columns for merging later
 spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
