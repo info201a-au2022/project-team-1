@@ -28,8 +28,8 @@ summary <- test_chart_22 %>%
   rename(value = "length(on_both)")
 
 pie <- ggplot(summary, aes(x="Charted on both TikTok and Spotify?", y = value, fill = on_both)) +
-  geom_bar(stat = "identity", width = 1)
+  geom_bar(stat = "identity")
 
 pie <- pie +
   coord_polar("y", start = 0) +
-  geom_text(aes(label = paste0(round((value/nrow(test_chart_22)*100)), "%")), position = position_stack(vjust = 0.5))
+  geom_text(aes(label = paste0(round((value/nrow(test_chart_22)*100)), "%")), position = "identity", check_overlap = TRUE)
