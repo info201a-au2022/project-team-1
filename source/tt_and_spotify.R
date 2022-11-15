@@ -25,6 +25,13 @@ chart$song_title = factor(chart$song_title, chart$song_title) #adds ordering fro
 
 point_peak_rank <- ggplot(
   data = chart, 
-aes(song_title, -peak_rank, col= "2021")) + geom_point()
+aes(track_pop, -peak_rank, col= "2021")) + geom_point()
+
+print(point_peak_rank + labs(
+  title = "Peak Rankings of 2021 Songs on \nof Spotify and TikTok",
+  y = "Ranking on Spotify",
+  x = "Popularity on TikTok"
+))
 # RAHHHHHHH
 # made it negative because the higher rank, the lower value you have
+# removed all missing values, just seeing relations between TikTok and Spotify

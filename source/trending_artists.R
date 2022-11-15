@@ -18,8 +18,6 @@ joined_songs_22 <- left_join(spotify_22, tiktok_22, na.rm = TRUE) %>%
 
 joined_songs_22 <- na.omit(joined_songs_22)
 
-View(joined_songs_22)
-
 pick_artist <- c("Doja Cat", "Olivia Rodrigo", "Ed Sheeran", "Lil Nas X")
 
 number_of_songs <- c(3, 2, 1, 2)
