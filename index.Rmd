@@ -6,6 +6,7 @@ output: html_document
 ---
 
 
+This is a data set that shows this this and this.
 ```{r trial, echo=FALSE, results='asis'}
 # This is just practicing whether the table will show up
 library(knitr)
@@ -13,4 +14,31 @@ summary_table <- read.csv(file = "tiktok_and_spotify_popular.csv")
 kable(summary_table[1:10, ])
 
 ```
+
+
+```{r num_of_songs, echo=FALSE, results='asis'}
+num_of_songs <- nrow(summary_table)
+```
+
+```{r num_of_artists, echo=FALSE, results='asis'}
+library(dplyr)
+unique_artists <- summary_table %>% 
+  group_by(artist_names) %>% 
+  summarise(
+    artist_name = unique(artist_names)
+  )
+num_of_artists <- nrow(unique_artists)
+```
+
+```{r num_of_pop_both, echo=FALSE, results='asis'}
+
+```
+
+
+How many songs were analyzed?
+`r num_of_songs`
+
+How many artists were analyzed?
+`r num_of_artists`
+
 
