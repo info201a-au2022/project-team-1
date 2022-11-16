@@ -53,7 +53,7 @@ For our second research question, we should again utilize all the datasets to ex
 For our third research question we can use all of the datasets to discover what kind of overlap there is between popular songs on TikTok and on Spotify charts. We can do so by joining the tables based on the common song titles.
 
 
-![](docs/photos/DataSetTableP2.png)
+![](photos/DataSetTableP2.png)
 This data was collected by Sveta 151 on GitHub in August of 2022 for a personal project that considers how TikTok is changing the music industry and how trends songs on TikTok social media influence global top charts.They used a collection method to gather popular songs in TikTok for 2019, 2020, 2021, and 2022 using Spotify API. They explain that Spotify does not provide all popular songs from previous years; it also updates weekly top week charts. So, to get this information, they had to look at other sources. To do so, they performed web scraping using BeautifulSoup. Overall, the data is credible and trustworthy. We obtained this data by doing some general research for datasets on Kaggle when we stumbled upon this user and their project that has a very similar research question to ours. We credit the source of the data.
 
 Full Citations:
