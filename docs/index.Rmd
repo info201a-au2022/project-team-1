@@ -76,7 +76,7 @@ The following table includes aggregated data from datasets which store informati
 ```{r trial, echo=FALSE, message=FALSE, results='asis'}
 library(knitr)
 library(dplyr)
-summary_table <- read.csv(file = "..data//tiktok_and_spotify_popular.csv")
+summary_table <- read.csv(file = "../source/tiktok_and_spotify_popular.csv")
 kable(summary_table[1:5, ])
 
 ```
@@ -124,8 +124,7 @@ For our data analysis, we took a look at data from 2020 to 2021 regarding popula
 ## Charts
 1)
 ```{r echo = FALSE}
-source("../source/tt_and_spotify.R", local = TRUE)
-
+source("../source/tt_and_spotify.R")
 ```
 
 This first chart displays the relationship between the popularity of songs on TikTok vs. on Spotify in 2021. The data comes from a table which contains songs that are popular on both TikTok and Spotify separately which are then organized and plotted using ggplot. We included this chart because we can directly compare how popular songs are on TikTok and on Spotify just by looking at the graph. In the future we can use an interactive graph like plotly so that we can hover over points and see their exact values. We can also consider filtering this data to be focused on a certain artist, or range of peak ranks if we need that information later on. 
@@ -141,7 +140,7 @@ The second chart displays the relationship between an artist and the amount of s
 
 3)
 ```{r echo = FALSE}
-source("../source/pie_tt_spotify_22.R", local = TRUE)
+source("../source/pie_tt_spotify_22.R")
 
 ```
 

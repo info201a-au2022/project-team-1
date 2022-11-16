@@ -1,17 +1,17 @@
 library(dplyr)
 library(ggplot2)
 
-# set working directory to root (project-team-1) so markdown would work
+# set working source file location (project-team-1/source) so markdown would work
 
 # reduced columns of spotify_charts_2021.csv to just 4 columns
 # renamed columns for merging later
-spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
+spotify_21 <- read.csv("../data/spotify_charts_2021.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
 # reduced columns of TikTok_songs_2021.csv to 4 columns
 # renamed columns for merging
-tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
+tiktok_21 <- read.csv("../data/TikTok_songs_2021.csv") %>%
   select(track_name, artist_name, album, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 

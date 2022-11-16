@@ -1,13 +1,14 @@
 library(dplyr)
 library(ggplot2)
 
-tiktok_22 <- read.csv("data/TikTok_songs_2022.csv") %>%
+# set working directory to source file (project-team-1/source)
+tiktok_22 <- read.csv("../data/TikTok_songs_2022.csv") %>%
   select(artist_name, track_name, track_pop) %>%
   arrange(-track_pop) %>%
   mutate(year = 2022) %>%
   rename(artist = artist_name, song_title = track_name)
 
-spotify_22 <- read.csv("data/spotify_charts_2022.csv") %>%
+spotify_22 <- read.csv("../data/spotify_charts_2022.csv") %>%
   select(artist_names, track_name, peak_rank) %>%
   arrange(peak_rank) %>%
   mutate(year = 2022) %>%
