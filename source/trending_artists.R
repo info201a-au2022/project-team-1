@@ -18,6 +18,8 @@ joined_songs_22 <- left_join(spotify_22, tiktok_22, na.rm = TRUE) %>%
   arrange(song_title)
 
 joined_songs_22 <- na.omit(joined_songs_22)
+joined_songs_22 <- joined_songs_22[!duplicated(joined_songs_22$song_title), ]
+View(joined_songs_22)
 
 pick_artist <- c("Doja Cat", "Olivia Rodrigo", "Ed Sheeran", "Lil Nas X")
 
