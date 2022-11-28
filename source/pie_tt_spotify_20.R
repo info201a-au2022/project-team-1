@@ -1,0 +1,47 @@
+library(dplyr)
+library(ggplot2)
+
+# Charts for 2020 Spotify and TikTok chart
+# Don't forget to change the wd() to /docs later
+# Currently working from /source
+spotify_20 <- read.csv("../data/spotify_top_charts_20.csv") %>%
+  select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
+  rename(artist = artist_names, song_title = track_name)
+
+tiktok_20 <- read.csv("../data/Tiktok_songs_2019.csv") %>%
+  select(track_name, artist_name, track_pop) %>%
+  rename(song_title = track_name, artist = artist_name)
+
+# Join both charts together by song title and artist
+# will be using Spotify chart as we want to see how many TikTok songs managed to 
+# break into the real music charts
+chart_20 <- left_join(spotify_20, tiktok_20, by = c("song_title", "artist")) %>%
+  arrange(-peak_rank) # negative because the lower score you have on Spotify, the 
+                      # higher value you have
+
+# Converting all NAs in `track_pop` into 0
+chart_20[is.na(chart_20)] = "0"
+
+# Adding another column `on_both` to see whether a song was popular on both Tiktok
+# and Spotify. Returns a boolean
+chart_20 <- chart_20 %>%
+  mutate(on_both = track_pop > 0)
+
+# New variable summarizes how many FALSEs and TRUEs there are
+summary_20 <- chart_20 %>%
+  group_by(on_both) %>%
+  summarize(length(on_both)) %>%
+  rename(value = "length(on_both)")
+
+# Making a simple stacked bar chart 
+pie_20 <- ggplot(summary_20, 
+                 aes(x = "Song",
+                     y = value,
+                     fill = on_both)) +
+  geom_bar(stat = "identity")
+
+# Converting previous chart into a pie chart
+pie_20 <- pie_20 +
+  coord_polar("y", start = 0) +
+  geom_text(aes(label = paste0(round((value/nrow(chart_20)*100)), "%")),
+            position = position_stack(vjust = 0.5))
