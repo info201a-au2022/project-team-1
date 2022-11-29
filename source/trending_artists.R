@@ -90,17 +90,9 @@ joined_songs_19 <- joined_songs_19 %>%
 View(joined_songs_19)
 
 # Building master dataframe for app purposes
-master_dataframe <- full_join(joined_songs_19, joined_songs_20, by = c("year")) %>%
-  arrange(year)
+master_dataframe <- full_join(joined_songs_19, joined_songs_20)
 
-View(master_dataframe)
+master_dataframe <- full_join(master_dataframe, joined_songs_21)
 
-master_dataframe <- full_join(master_dataframe, joined_songs_21, by = c("year")) %>%
-  arrange(year)
-
-View(master_dataframe)
-
-master_dataframe <- full_join(master_dataframe, joined_songs_22, by = c("year")) %>%
-  arrange(year)
-
+master_dataframe <- full_join(master_dataframe, joined_songs_22)
 View(master_dataframe)
