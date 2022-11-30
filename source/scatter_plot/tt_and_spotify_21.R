@@ -2,16 +2,17 @@ library(dplyr)
 library(ggplot2)
 
 # set working source file location (project-team-1/source) so markdown would work
+# later changed it to `project-team-1` so look into markdown
 
 # reduced columns of spotify_charts_2021.csv to just 4 columns
 # renamed columns for merging later
-spotify_21 <- read.csv("../data/spotify_charts_2021.csv") %>%
+spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
 # reduced columns of TikTok_songs_2021.csv to 4 columns
 # renamed columns for merging
-tiktok_21 <- read.csv("../data/TikTok_songs_2021.csv") %>%
+tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
   select(track_name, artist_name, album, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 
@@ -27,6 +28,7 @@ point_peak_rank <- ggplot(
   data = chart, 
 aes(track_pop, -peak_rank, col= "2021")) + geom_point()
 
+# Adding labels to the axis
 print(point_peak_rank + labs(
   title = "Peak Rankings of 2021 Songs on \nof Spotify and TikTok",
   y = "Ranking on Spotify",
