@@ -21,7 +21,6 @@ joined_songs_22 <- joined_songs_22[!duplicated(joined_songs_22$song_title), ]
 joined_songs_22 <- joined_songs_22 %>%
   select(-year.y) %>%
   rename(year = year.x)
-View(joined_songs_22)
 
 # Joined table for 2021
 
@@ -43,7 +42,6 @@ joined_songs_21 <- joined_songs_21[!duplicated(joined_songs_21$song_title), ]
 joined_songs_21 <- joined_songs_21 %>%
   select(-year.y) %>%
   rename(year = year.x)
-View(joined_songs_21)
 
 # Joined table for 2020
 
@@ -65,7 +63,6 @@ joined_songs_20 <- joined_songs_20[!duplicated(joined_songs_20$song_title), ]
 joined_songs_20 <- joined_songs_20 %>%
   select(-year.y) %>%
   rename(year = year.x)
-View(joined_songs_20)
 
 # Joined table for 2019
 
@@ -87,7 +84,6 @@ joined_songs_19 <- joined_songs_19[!duplicated(joined_songs_19$song_title), ]
 joined_songs_19 <- joined_songs_19 %>%
   select(-year.y) %>%
   rename(year = year.x)
-View(joined_songs_19)
 
 # Building master dataframe for app purposes
 master_dataframe <- full_join(joined_songs_19, joined_songs_20)
@@ -95,4 +91,3 @@ master_dataframe <- full_join(joined_songs_19, joined_songs_20)
 master_dataframe <- full_join(master_dataframe, joined_songs_21)
 
 master_dataframe <- full_join(master_dataframe, joined_songs_22)
-View(master_dataframe)
