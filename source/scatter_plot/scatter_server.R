@@ -9,8 +9,8 @@ source("source/scatter_plot/tt_and_spotify_22.R")
 
 # Define the server
 scatter_server <- function(input, output) {
-  # Render a plotly object that returns scatter plot
-  # key from the plotlyOutput was `graph`
+# Render a plotly object that returns scatter plot
+# key from the plotlyOutput was `graph`
   output$graph <- renderPlotly({
     plot_ly(data = get(input$year),
             x = ~track_pop, # x axis

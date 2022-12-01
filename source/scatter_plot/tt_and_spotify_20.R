@@ -31,7 +31,7 @@ point_peak_rank_20 <- ggplot(
   aes(track_pop, -peak_rank, col= "2020")) + geom_point() 
 
 # Adding labels to the axis
-ponit_peak_rank_20 <- point_peak_rank_20 + labs(
+point_peak_rank_20 <- point_peak_rank_20 + labs(
   title = "Peak Rankings of 2020 Songs on \nof Spotify and TikTok",
   y = "Ranking on Spotify",
   x = "Popularity on TikTok"

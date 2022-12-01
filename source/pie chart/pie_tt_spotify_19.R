@@ -6,11 +6,11 @@ library(plotly)
 # Please change the wd() to /docs later, but for now we are going to be 
 # working with /source
 # working from /docs would be "data/CSV FILE.csv"
-spotify_19 <- read.csv("../../data/spotify_top_charts_19.csv") %>%
+spotify_19 <- read.csv("data/spotify_top_charts_19.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
-tiktok_19 <- read.csv("../../data/TikTok_songs_2019.csv") %>%
+tiktok_19 <- read.csv("data/TikTok_songs_2019.csv") %>%
   select(track_name, artist_name, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 
