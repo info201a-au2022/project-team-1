@@ -17,23 +17,23 @@ tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
   rename(song_title = track_name, artist = artist_name)
 
 # merged both charts together 
-chart <- left_join(spotify_21, tiktok_21) %>%
+chart_21 <- left_join(spotify_21, tiktok_21) %>%
   arrange(-peak_rank)
 
-# making a plot for chart$peak_rank
-chart$song_title <- as.vector(chart$song_title) #gets rid of alphabetical order
-chart$song_title = factor(chart$song_title, chart$song_title) #adds ordering from arrange()
+# making a plot for chart_21$peak_rank
+chart_21$song_title <- as.vector(chart_21$song_title) #gets rid of alphabetical order
+chart_21$song_title = factor(chart_21$song_title, chart_21$song_title) #adds ordering from arrange()
 
-point_peak_rank <- ggplot(
-  data = chart, 
+point_peak_rank_21 <- ggplot(
+  data = chart_21, 
 aes(track_pop, -peak_rank, col= "2021")) + geom_point()
 
 # Adding labels to the axis
-print(point_peak_rank + labs(
+point_peak_rank_21 <- point_peak_rank_21 + labs(
   title = "Peak Rankings of 2021 Songs on \nof Spotify and TikTok",
   y = "Ranking on Spotify",
   x = "Popularity on TikTok"
-))
+)
 # RAHHHHHHH
 # made it negative because the higher rank, the lower value you have
 # removed all missing values, just seeing relations between TikTok and Spotify

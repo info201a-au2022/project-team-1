@@ -23,16 +23,16 @@ chart_20 <- left_join(spotify_20, tiktok_20) %>%
 
 # making a plot for chart$peak_rank
 chart_20$song_title <- as.vector(chart_20$song_title) #gets rid of alphabetical order
-chart_20$song_title = factor(chart_20$song_title, chart_20$song_title) #adds ordering from arrange()
-chart_20 <- chart_20[-844, ] # delete any duplicates
+unique_2020 <- unique(chart_20$song_title)
+chart_20$song_title = factor(chart_20$song_title, levels = unique_2020, ordered = TRUE) #adds ordering from arrange()
 
 point_peak_rank_20 <- ggplot(
   data = chart_20, 
   aes(track_pop, -peak_rank, col= "2020")) + geom_point() 
 
 # Adding labels to the axis
-print(point_peak_rank_20 + labs(
+ponit_peak_rank_20 <- point_peak_rank_20 + labs(
   title = "Peak Rankings of 2020 Songs on \nof Spotify and TikTok",
   y = "Ranking on Spotify",
   x = "Popularity on TikTok"
-))
+)
