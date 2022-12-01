@@ -25,13 +25,30 @@ chart_22$song_title <- as.vector(chart_22$song_title) #gets rid of alphabetical 
 unique_2022 <- unique(chart_22$song_title)
 chart_22$song_title = factor(chart_22$song_title, levels = unique_2022, ordered = TRUE) #adds ordering from arrange()
 
+# JUST ADDED THIS
+# -----------------------------------------------------
+# add another column for "year" just to say 2022
+chart_22 <- chart_22 %>%
+  mutate(Year = "2022")
+# --------------------------------------------------------
+
 point_peak_rank_22 <- ggplot(
   data = chart_22, 
   aes(track_pop, -peak_rank, col = "2022")) + geom_point()
 
 # Adding labels to the axis
-print(point_peak_rank_22 + labs(
+point_peak_rank_22 <- point_peak_rank_22 + labs(
   title = "Peak Rankings of 2022 Songs on \nof Spotify and TikTok",
   y = "Ranking on Spotify",
   x = "Popularity on TikTok"
-))
+)
+
+
+# OG CODING AFTER POINT_PEAK_RANK_22 LINE 28
+# ------------------------------------------------------------------------
+# Adding labels to the axis
+#print(point_peak_rank_22 + labs(
+  #title = "Peak Rankings of 2022 Songs on \nof Spotify and TikTok",
+  #y = "Ranking on Spotify",
+  #x = "Popularity on TikTok"
+#))
