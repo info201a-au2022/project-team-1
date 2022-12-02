@@ -91,3 +91,21 @@ master_dataframe <- full_join(joined_songs_19, joined_songs_20)
 master_dataframe <- full_join(master_dataframe, joined_songs_21)
 
 master_dataframe <- full_join(master_dataframe, joined_songs_22)
+master_dataframe <- master_dataframe[order(master_dataframe$artist), ]
+
+year <-rep(c(2019,2020,2021,2022),times=106)
+
+artist <- unique(master_dataframe$artist)
+artist <- rep(artist, each = 4)
+
+ref_df <- data.frame(artist, year)
+
+View(ref_df)
+
+songs_tiktok_19_table <- table(tiktok_19$artist)
+songs_tiktok_19 <- data.frame(songs_tiktok_19_table) %>%
+  rename(artist = Var1) %>%
+  mutate(year = 2019)
+
+ref_df <- ref_df %>% left_join(songs_tiktok_19, by =c('artist', 'year'))
+ref_df[is.na(ref_df)] = 0
