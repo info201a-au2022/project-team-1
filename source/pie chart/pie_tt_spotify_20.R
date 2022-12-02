@@ -4,11 +4,11 @@ library(ggplot2)
 # Charts for 2020 Spotify and TikTok chart
 # Don't forget to change the wd() to /docs later
 # Currently working from /source
-spotify_20 <- read.csv("../../data/spotify_top_charts_20.csv") %>%
+spotify_20 <- read.csv("data/spotify_top_charts_20.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
-tiktok_20 <- read.csv("../../data/Tiktok_songs_2020.csv") %>%
+tiktok_20 <- read.csv("data/Tiktok_songs_2020.csv") %>%
   select(track_name, artist_name, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 

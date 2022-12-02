@@ -14,6 +14,9 @@ source("source/scatter_plot/tt_and_spotify_22.R")
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
 source("source/pie chart/pie_tt_spotify_19.r")
+source("source/pie chart/pie_tt_spotify_20.r")
+source("source/pie chart/pie_tt_spotify_21.r")
+source("source/pie chart/pie_tt_spotify_22.r")
 # ------------------------------------------------------------------------------
 
 

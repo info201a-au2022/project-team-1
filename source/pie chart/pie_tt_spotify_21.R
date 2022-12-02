@@ -5,11 +5,11 @@ library(ggplot2)
 # Please change the wd() to /docs later, but for now we are going to be 
 # working with /source
 # working from /docs would be "data/CSV FILE.csv"
-spotify_21 <- read.csv("../../data/spotify_charts_2021.csv") %>%
+spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
-tiktok_21 <- read.csv("../../data/TikTok_songs_2021.csv") %>%
+tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
   select(track_name, artist_name, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 
