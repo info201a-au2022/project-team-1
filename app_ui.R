@@ -33,6 +33,27 @@ radio_panel <- tabPanel(
 )
 # ------------------------------------------------------------------------------
 # Stacked Bar Chart Panel (Mie) ------------------------------------------------
+barchart_side_content <- sidebarPanel(
+  selectInput(
+    "artistvar",
+    label = "Select artist",
+    choices = unique(final_dataframe$artist)
+  )
+)
+
+barchart_main_content <- mainPanel(
+  plotlyOutput("plot")
+)
+
+bar_chart_panel <- tabPanel(
+  "barchart",
+  titlePanel("Artist Song Popularity on TikTok vs. Spotify"),
+  # A `sidebarLayout()` that contains...
+  sidebarLayout(
+    barchart_side_content,
+    barchart_main_content
+  )
+)
 
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
@@ -67,7 +88,7 @@ ui <- navbarPage(
   # Scatter plot panel (Kim)
   radio_panel, 
   # Stacked bar chart panel (Mie)
-  
+  bar_chart_panel,
   # Pie chart panel (Xenia)
   pie_panel
 )
