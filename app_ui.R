@@ -109,7 +109,7 @@ report_panel <- tabPanel(
     p("For our first question we can use the TikTok and Spotify data sets from all years to examine their popularity. Specifically we can look at the columns peak_rank, artist_pop and track_pop to see their rankings for each app."),
     p("For our second research question, we should again utilize all the datasets to examine which artists are popular on both Spotify and TikTok. We can create a table to show which songs are popular on both apps and then filter this data to find artists who have multiple songs."),
     p("For our third research question we can use all of the datasets to discover what kind of overlap there is between popular songs on TikTok and on Spotify charts. We can do so by joining the tables based on the common song titles."),
-    img("test", src = "docs/photos/DataSetTableP3.jpg")
+    img("test", src = "docs/photos/DataSetTableP3.png")
   )
 )
 # ------------------------------------------------------------------------------

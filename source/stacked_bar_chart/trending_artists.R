@@ -308,3 +308,9 @@ new_df_3$pop_on_both=rowSums(cbind(new_df_3$pop_on_both.x,new_df_3$pop_on_both.x
 new_df_3 <- new_df_3[, -c(3, 4, 5, 6)]
 
 final_dataframe <- new_df_3
+
+data_file_name <- c("TikTok_songs_2019.csv", "TikTok_songs_2020.csv", "TikTok_songs_2021.csv", "TikTok_songs_2022.csv")
+number_of_observations <- c(224, 293, 191, 264, 1047, 1140, 1028, 647)
+number_of_variables <- c(18, 18, 18, 18, 17, 17, 17, 17)
+data_df <- data.frame(data_file_name, number_of_observations, number_of_variables)
+                
