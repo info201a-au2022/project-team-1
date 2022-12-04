@@ -1,5 +1,6 @@
 library(shiny)
 library(plotly)
+source("source/stacked_bar_chart/trending_artists.R")
 
 # Intro Panel 1 (Kim) ----------------------------------------------------------
 
@@ -92,3 +93,4 @@ ui <- navbarPage(
   # Pie chart panel (Xenia)
   pie_panel
 )
+

@@ -19,8 +19,6 @@ source("source/pie chart/pie_tt_spotify_21.r")
 source("source/pie chart/pie_tt_spotify_22.r")
 # ------------------------------------------------------------------------------
 
-
-
 # Define the server
 server <- function(input, output) {
 # Scatter Plot Panel (Kim) -----------------------------------------------------
@@ -48,6 +46,9 @@ server <- function(input, output) {
   })
 # ------------------------------------------------------------------------------
 # Stacked Bar Chart Panel (Mie) ------------------------------------------------
+  output$plot <- renderPlotly({
+    return(build_bar_chart(input$artistvar))
+  })
 
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
