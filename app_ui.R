@@ -14,7 +14,7 @@ radio_sidebar_content <- sidebarPanel(
     inputId = "year",
     label = "Choose a year",
     choiceNames = c("2019", "2020", "2021", "2022"),
-    choiceValues = c("s_chart_19", "chart_20", "chart_21", "chart_22"), # reminder
+    choiceValues = c("s_chart_19", "s_chart_20", "s_chart_21", "s_chart_22"), # reminder
     # that when doing input$year, it's NOT "2019" but rather the chart 
     selected = NULL
   )
@@ -84,7 +84,7 @@ report_panel <- tabPanel(
   mainPanel(
     h6("Code Name: Tiktok-music"),
     h6("Project Title: Knock, Knock It’s TikTok: Examining TikTok’s Role in Changing the Music Industry"),
-    h6("Report by: Mie Dunbar (dunbar11@uw.edu), Xenia Capcan (capcax@uw.edu), Kim Ng (kimng@uw.edu)"),
+    h6("Report by: Mie Dunbar (dunbar11@uw.edu), Xenia Capcan (capcax@uw.edu), Kim Nguyen (kimng@uw.edu)"),
     h6("Affiliation: INFO-201: Technical Foundations of Informatics- The Information School- University of Washington"),
     h6("Date: Autumn 2022"),
     h3(strong("Abstract")),
