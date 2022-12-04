@@ -83,9 +83,9 @@ pie_panel <- tabPanel(
 
 # Define the UI
 ui <- navbarPage(
-  "Bawling vs. Ballin", # application title, can be changed to something else
+  "TikTok's Role in the Music Industry",
   # The report panels, most likely intro and other discussions
-  
+
   # Scatter plot panel (Kim)
   radio_panel, 
   # Stacked bar chart panel (Mie)
