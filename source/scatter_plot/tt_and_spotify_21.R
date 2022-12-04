@@ -6,26 +6,26 @@ library(ggplot2)
 
 # reduced columns of spotify_charts_2021.csv to just 4 columns
 # renamed columns for merging later
-spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
+s_spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
   select(artist_names, track_name, peak_rank, weeks_on_chart) %>%
   rename(artist = artist_names, song_title = track_name)
 
 # reduced columns of TikTok_songs_2021.csv to 4 columns
 # renamed columns for merging
-tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
+s_tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
   select(track_name, artist_name, album, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 
 # merged both charts together 
-chart_21 <- left_join(spotify_21, tiktok_21) %>%
+s_chart_21 <- left_join(s_spotify_21, s_tiktok_21) %>%
   arrange(-peak_rank)
 
-# making a plot for chart_21$peak_rank
-chart_21$song_title <- as.vector(chart_21$song_title) #gets rid of alphabetical order
-chart_21$song_title = factor(chart_21$song_title, chart_21$song_title) #adds ordering from arrange()
+# making a plot for s_chart_21$peak_rank
+s_chart_21$song_title <- as.vector(s_chart_21$song_title) #gets rid of alphabetical order
+s_chart_21$song_title = factor(s_chart_21$song_title, s_chart_21$song_title) #adds ordering from arrange()
 
 point_peak_rank_21 <- ggplot(
-  data = chart_21, 
+  data = s_chart_21, 
 aes(track_pop, -peak_rank, col= "2021")) + geom_point()
 
 # Adding labels to the axis
