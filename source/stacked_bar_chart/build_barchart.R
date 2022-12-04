@@ -1,7 +1,7 @@
 library(plotly)
 library(stringr)
 
-source("trending_artists.R")
+source("source/stacked_bar_chart/trending_artists.R")
 
 build_bar_chart <- function(artistvar) {
   data <- final_dataframe %>%

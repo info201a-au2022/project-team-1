@@ -47,7 +47,7 @@ barchart_main_content <- mainPanel(
 )
 
 bar_chart_panel <- tabPanel(
-  "barchart",
+  "Bar Chart",
   titlePanel("Artist Song Popularity on TikTok vs. Spotify"),
   # A `sidebarLayout()` that contains...
   sidebarLayout(

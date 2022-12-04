@@ -1,6 +1,6 @@
 library(dplyr)
 
-source("build_bar_chart.R")
+source("source/stacked_bar_chart/build_bar_chart.R")
 
 server <- function(input, output) {
   output$plot <- renderPlotly({

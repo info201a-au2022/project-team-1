@@ -1,6 +1,6 @@
 library(shiny)
 library(plotly)
-source("trending_artists.R")
+source("source/stacked_bar_chart/trending_artists.R")
 
 barchart_side_content <- sidebarPanel(
   selectInput(
