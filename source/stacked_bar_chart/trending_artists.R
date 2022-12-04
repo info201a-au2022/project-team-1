@@ -3,12 +3,12 @@ library(ggplot2)
 
 # set working directory to source file (project-team-1/source)
 # Joined table for 2022
-tiktok_22 <- read.csv("../../data/TikTok_songs_2022.csv") %>%
+tiktok_22 <- read.csv("data/TikTok_songs_2022.csv") %>%
   select(artist_name, track_name) %>%
   mutate(year = 2022) %>%
   rename(artist = artist_name, song_title = track_name)
 
-spotify_22 <- read.csv("../../data/spotify_charts_2022.csv") %>%
+spotify_22 <- read.csv("data/spotify_charts_2022.csv") %>%
   select(artist_names, track_name) %>%
   mutate(year = 2022) %>%
   rename(artist = artist_names, song_title = track_name)
@@ -24,12 +24,12 @@ joined_songs_22 <- joined_songs_22 %>%
 
 # Joined table for 2021
 
-tiktok_21 <- read.csv("../../data/TikTok_songs_2021.csv") %>%
+tiktok_21 <- read.csv("data/TikTok_songs_2021.csv") %>%
   select(artist_name, track_name) %>%
   mutate(year = 2021) %>%
   rename(artist = artist_name, song_title = track_name)
 
-spotify_21 <- read.csv("../../data/spotify_charts_2021.csv") %>%
+spotify_21 <- read.csv("data/spotify_charts_2021.csv") %>%
   select(artist_names, track_name) %>%
   mutate(year = 2021) %>%
   rename(artist = artist_names, song_title = track_name)
@@ -45,12 +45,12 @@ joined_songs_21 <- joined_songs_21 %>%
 
 # Joined table for 2020
 
-tiktok_20 <- read.csv("../../data/TikTok_songs_2020.csv") %>%
+tiktok_20 <- read.csv("data/TikTok_songs_2020.csv") %>%
   select(artist_name, track_name) %>%
   mutate(year = 2020) %>%
   rename(artist = artist_name, song_title = track_name)
 
-spotify_20 <- read.csv("../../data/spotify_top_charts_20.csv") %>%
+spotify_20 <- read.csv("data/spotify_top_charts_20.csv") %>%
   select(artist_names, track_name) %>%
   mutate(year = 2020) %>%
   rename(artist = artist_names, song_title = track_name)
@@ -66,12 +66,12 @@ joined_songs_20 <- joined_songs_20 %>%
 
 # Joined table for 2019
 
-tiktok_19 <- read.csv("../../data/TikTok_songs_2019.csv") %>%
+tiktok_19 <- read.csv("data/TikTok_songs_2019.csv") %>%
   select(artist_name, track_name) %>%
   mutate(year = 2019) %>%
   rename(artist = artist_name, song_title = track_name)
 
-spotify_19 <- read.csv("../../data/spotify_top_charts_19.csv") %>%
+spotify_19 <- read.csv("data/spotify_top_charts_19.csv") %>%
   select(artist_names, track_name) %>%
   mutate(year = 2019) %>%
   rename(artist = artist_names, song_title = track_name)
