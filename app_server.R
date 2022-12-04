@@ -10,7 +10,7 @@ source("source/scatter_plot/tt_and_spotify_21.R")
 source("source/scatter_plot/tt_and_spotify_22.R")
 # ------------------------------------------------------------------------------
 # Stacked Bar Chart Panel (Mie) ------------------------------------------------
-source("source/stacked_bar_chart/build_bar_chart.R")
+source("source/stacked_bar_chart/build_barchart.R")
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
 source("source/pie chart/pie_tt_spotify_19.r")
