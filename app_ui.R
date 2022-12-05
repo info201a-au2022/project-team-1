@@ -43,7 +43,8 @@ barchart_side_content <- sidebarPanel(
 )
 
 barchart_main_content <- mainPanel(
-  plotlyOutput("plot")
+  plotlyOutput("plot"),
+  p("The purpose of this chart is to show how many songs an artist has that are popular on TikTok, Spotify, and both for each year from 2019-2022. This information is useful because it provides a strong analysis of which artists and what songs can find success on both platforms and which of them can't. Then we can use this analysis to draw conclusions on how/why the do/don't find success.")
 )
 
 bar_chart_panel <- tabPanel(
