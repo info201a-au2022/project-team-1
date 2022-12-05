@@ -56,4 +56,6 @@ server <- function(input, output) {
     plot_ly(data = get(input$pievar), labels = ~artist, values = ~popular, type = 'pie')
   })
 # ------------------------------------------------------------------------------
+# Report Panel (Mie)
+    output$table <- renderTable(data_df)
 }
