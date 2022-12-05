@@ -21,7 +21,12 @@ radio_sidebar_content <- sidebarPanel(
 )
 # Main panel to have the graphs show up after selecting year(s); reactive/output
 radio_main_content <- mainPanel(
-  plotlyOutput("graph")
+  plotlyOutput("graph"),
+  p("The purpose of this graph is to compare the popularity of a song on TikTok versus 
+    it's peak performance on Spotify charts. While the scale for the x-axis 
+    (popularity on TikTok) is self explanatory, it should be noted that the 
+    y-axis (peak position on Spotify) is flipped, as the higher a song charts, the 
+    lower the numerical value (being #1 on Spotify has more value than being #200).")
 )
 # The full scatter plot PANEL all laid out
 radio_panel <- tabPanel(
