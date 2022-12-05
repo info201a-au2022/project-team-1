@@ -5,10 +5,10 @@ account: 1vqw44-mie-dunbar
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7819467
-bundleId: 6595092
+bundleId: 6595135
 url: https://1vqw44-mie-dunbar.shinyapps.io/practice-publish/
-when: 1670265252.06333
-lastSyncTime: 1670265252.06334
+when: 1670265650.45941
+lastSyncTime: 1670265650.45942
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: app_server.R|app_ui.R|ignore/main_data_frame_org.R|ignore/practice_playground.R|instructions/p01-proposal-requirements.md|instructions/project-design-brief.pdf|instructions/README.md|LICENSE|README.md|data|docs|source
+ignoredFiles: app_server.R|app_ui.R|ignore/main_data_frame_org.R|ignore/practice_playground.R|instructions/p01-proposal-requirements.md|instructions/project-design-brief.pdf|instructions/README.md|LICENSE|README.md
