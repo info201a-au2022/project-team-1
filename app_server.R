@@ -13,10 +13,10 @@ source("source/scatter_plot/tt_and_spotify_22.R")
 source("source/stacked_bar_chart/build_barchart.R")
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
-source("source/pie chart/pie_tt_spotify_19.r")
-source("source/pie chart/pie_tt_spotify_20.r")
-source("source/pie chart/pie_tt_spotify_21.r")
-source("source/pie chart/pie_tt_spotify_22.r")
+source("source/pie chart/pie_tt_spotify_19.R")
+source("source/pie chart/pie_tt_spotify_20.R")
+source("source/pie chart/pie_tt_spotify_21.R")
+source("source/pie chart/pie_tt_spotify_22.R")
 # ------------------------------------------------------------------------------
 
 # Define the server
