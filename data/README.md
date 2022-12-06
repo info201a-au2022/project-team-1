@@ -2,7 +2,7 @@
 
 In our project, we use the following data files:
 
-## Data files (TODO: Update/delete for your PROJECT)
+## Data files
 |Data File Name | Brief Description|
 |---------------| -----------------|
 |[TikTok_songs_2019](TikTok_songs_2019.csv) | CSV file of popular TikTok songs in 2019.
