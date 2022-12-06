@@ -4,6 +4,21 @@ source("source/stacked_bar_chart/trending_artists.R")
 
 # Intro Panel 1 (Kim) ----------------------------------------------------------
 
+intro_panel <- tabPanel(
+  "Introduction",
+  tags$head(
+    tags$style(HTML("
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+    h1 {
+      font-family: 'Rubik', sans-serif;
+      align-text: center;
+      color: #3D388F;
+    }
+    
+  "))),
+  
+  titlePanel(h1(strong("Examining TikTok's Effects On the Music Industry")))
+)
 # ------------------------------------------------------------------------------
 # Scatter Plot Panel (Kim) -----------------------------------------------------
 
@@ -155,7 +170,7 @@ report_panel <- tabPanel(
 ui <- navbarPage(
   "TikTok's Role in the Music Industry",
   # The report panels, most likely intro and other discussions
-
+  intro_panel,
   # Scatter plot panel (Kim)
   radio_panel, 
   # Stacked bar chart panel (Mie)
