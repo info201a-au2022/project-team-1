@@ -21,6 +21,12 @@ source("source/pie_chart/pie_tt_spotify_22.R")
 
 # Define the server
 server <- function(input, output) {
+# Intro (Kim) ------------------------------------------------------------------
+output$intro_pic <- renderImage({
+  list(src = "www/tiktoklogo.jpeg",
+       width = "50%",
+       height = "100%")
+}, deleteFile = FALSE)
 # Scatter Plot Panel (Kim) -----------------------------------------------------
   output$graph <- renderPlotly({
     plot_ly(data = get(input$year),

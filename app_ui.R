@@ -1,6 +1,7 @@
 library(shiny)
 library(plotly)
 source("source/stacked_bar_chart/trending_artists.R")
+source("docs/introduction.R")
 
 # Intro Panel 1 (Kim) ----------------------------------------------------------
 
@@ -17,7 +18,11 @@ intro_panel <- tabPanel(
     
   "))),
   
-  titlePanel(h1(strong("Examining TikTok's Effects On the Music Industry")))
+  titlePanel(h1(strong("Examining TikTok's Effects On the Music Industry"))),
+  imageOutput("intro_pic"),
+  br(),
+  hr(),
+  introduction
 )
 # ------------------------------------------------------------------------------
 # Scatter Plot Panel (Kim) -----------------------------------------------------
@@ -192,6 +197,7 @@ ui <- navbarPage(
   # Pie chart panel (Xenia)
   pie_chart_panel,
   # Report panel (Mie)
-  report_panel
+  report_panel,
+  inverse = TRUE # makes the tab bars black
 )
 

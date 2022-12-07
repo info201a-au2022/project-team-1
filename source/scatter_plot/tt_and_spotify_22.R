@@ -13,7 +13,7 @@ s_spotify_22 <- read.csv("data/spotify_charts_2022.csv") %>%
 # reduced columns of TikTok_songs_2022.csv to 4 columns
 # renamed columns for merging
 s_tiktok_22 <- read.csv("data/TikTok_songs_2022.csv") %>%
-  select(track_name, artist_name, track_pop) %>%
+  select(track_name, artist_name, album, track_pop) %>%
   rename(song_title = track_name, artist = artist_name)
 
 # merged both charts together
