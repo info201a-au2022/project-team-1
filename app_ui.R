@@ -115,7 +115,19 @@ pie_chart_panel <- tabPanel(
 
 # ------------------------------------------------------------------------------
 # Summary Takeaways (Xenia) ----------------------------------------------------
-
+summary_panel <- tabPanel(
+  "Summary Takeaways",
+  titlePanel(strong("Summary Takeaways")),
+  mainPanel(
+    p("Through our analysis, we found patterns in the data on social media companies' music charts that provide more information about how music is found, shared, and appreciated. Here are some of the key takeaways that we learned."),
+    h3("Over the past four years, there have been an increasing number of songs that are top-rated on both Spotify and Tiktok."),
+    p("The relationship between chart ranking and TikTok popularity has grown more linear over time, according to our analysis of the chart ranking vs. TikTok popularity. Ride It by Regard, the song with the greatest Tiktok popularity in 2019, peaked at position #13 on the Spotify charts. In comparison to 2022, 8 of the top-trending songs also held the #1 spot on Spotify, and more than half of the songs had Tiktok popularity exceeding 75. Since Tiktok is a rapidly expanding platform, it is possible to suppose that Tiktok might become a crucial platform for artists to advertise their music, even though it is difficult to say with this analysis whether one influences the other or the other way around."),
+    h3("The variety of artists has also increased with highlights of new and re-emerging artists."),
+    p("Only 19 artists were featured in the charts that were current on Tiktok and Spotify in 2019. This number rose to 42 in 2020, and in 2021 and 2022, there were 41 distinct artists with songs on both platforms' charts. Since Tiktok's significant growth in 2020, newer musicians have begun to emerge, and the platform has given them a platform to organically market their songs, bringing in new listeners. Older songs regained popularity alongside new performers, demonstrating that the platform is truly under the user's control and that this influence can alter how music is promoted in the modern era."),
+    h3("Some artists became popular once while some consistently had songs trending on both platforms."),
+    p("After examining the popularity trends for each musician, we found that some only experienced brief moments of fame on both platforms, but others continued to perform their songs consistently. For instance, Doja Cat has regularly had two to three songs that are trending on both platforms for all the years considered, with ranks and popularity being comparatively greater. However, Running Up That Hill by Kate Bush, which just gained fame in 2022, was ranked #1 on Spotify and had a popularity score of 95 on Tiktok. Given that Kate Bush is also an established musician, this example can indicate that there is no set formula for how songs become popular and that a lot of it depends on current societal trends, media, and events. Yet again, this may help musicians get perspective on current musical trends.")
+  )
+)
 # ------------------------------------------------------------------------------
 # Report (Mie) -----------------------------------------------------------------
 report_panel <- tabPanel(
@@ -196,6 +208,8 @@ ui <- navbarPage(
   bar_chart_panel,
   # Pie chart panel (Xenia)
   pie_chart_panel,
+  # Summary panel (Xenia)
+  summary_panel,
   # Report panel (Mie)
   report_panel,
   inverse = TRUE # makes the tab bars black
