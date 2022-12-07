@@ -79,18 +79,32 @@ bar_chart_panel <- tabPanel(
 
 # ------------------------------------------------------------------------------
 # Pie Chart Panel (Xenia) ------------------------------------------------------
-pie_panel <- tabPanel(
-  "Pie Chart", # title of tab
-  titlePanel("idk what title Xenia has"), # the title on the panel itself
+piechart_side_content <- sidebarPanel(
+  selectInput(
+    "pievar",
+    label = "Select year",
+    choices = c("2019" = "summary_19",
+                "2020" = "summary_20",
+                "2021" = "summary_21",
+                "2022" = "summary_22"))
+)
+
+piechart_main_content <- mainPanel(
+  plotlyOutput("pie"),
+  p("This chart shows the distribution of artists that were popular both on 
+    Tiktok and Spotify based on the amount of songs that they had trending on 
+    both platforms. Clicking on each year, you can analyze how many different 
+    different artists there were per each year and how their percentage changed 
+    each year.")
+)
+
+pie_chart_panel <- tabPanel(
+  "Pie Chart",
+  titlePanel("Artist Popularity Distribution on TikTok and Spotify"),
+  # A `sidebarLayout()` that contains...
   sidebarLayout(
-    selectInput(
-      "pievar",
-      label = "Select year",
-      choices = c("2019" = "summary_19",
-                  "2020" = "summary_20",
-                  "2021" = "summary_21",
-                  "2022" = "summary_22")),
-  mainPanel(plotlyOutput("pie"))
+    piechart_side_content,
+    piechart_main_content
   )
 )
 
@@ -176,7 +190,7 @@ ui <- navbarPage(
   # Stacked bar chart panel (Mie)
   bar_chart_panel,
   # Pie chart panel (Xenia)
-  pie_panel,
+  pie_chart_panel,
   # Report panel (Mie)
   report_panel
 )
