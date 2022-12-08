@@ -5,9 +5,9 @@ account: 1vqw44-mie-dunbar
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7819467
-bundleId: 6595211
+bundleId: 6612038
 url: https://1vqw44-mie-dunbar.shinyapps.io/practice-publish/
-when: 1670266344.56525
-lastSyncTime: 1670266344.56526
+when: 1670529906.84563
+lastSyncTime: 1670529906.84564
 asMultiple: FALSE
 asStatic: FALSE
